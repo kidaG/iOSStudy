@@ -16,40 +16,46 @@ class Teams: Records {
         static let TableName = "Teams"
     }
     
-    /// テーブル名を返す
-    override class func getTableName() -> String{
+    //↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Please copy the following to other class inheriting Records↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+    
+    /// protected - テーブル名を返す
+    override class func _getTableName() -> String{
         return Constant.TableName
     }
     
+    /// Created Instance is saved to DB after calling updateToDB() method
+    override convenience init(){
+        self.init(isSave:true)
+    }
     
-    /// オリジナルの初期化。これで作成された変数はDBに登録される
-    /// 注意：一時的にmanagedObjectContextに保存されるが、saveContextをしていないため、実際にDBには書き込まれないことに注意する必要あり。
-    init(isSave:Bool = true){
+    /// You can control whether you will save the initialized instance or not by the following parameter:
+    /// - parameter isSave:
+    init(isSave:Bool){
         super.init(tableName: Constant.TableName, isSave: isSave)
     }
     
+    /// Not Recommend to use this initializer
     override init(entity: NSEntityDescription, insertIntoManagedObjectContext context: NSManagedObjectContext?) {
         super.init(entity: entity, insertIntoManagedObjectContext: context)
     }
     
-    static func createRecord(name:String, id:Int) -> Teams?{
-        let team:Teams = Teams()
-        team.name = name
-        team.teamId = id
-        team.updateToDB()
-        return team
+    /// Not Recommend to use this initializer
+    required init(tableName: String, isSave: Bool = true) {
+        super.init(tableName: tableName, isSave: isSave)
     }
+    
+
+    //↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Please copy the above to other class inheriting Records ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
     
     
     static func fetchAllRecords() -> [Teams]{
-        
-        if let teams = Records.fetchAllRecords(Constant.TableName) as? [Teams]
-        {
-            return teams
+        if let records = self._fetchAllRecords() as? [Teams]{
+            return records
         }else{
             return []
         }
     }
+    
 }
 
 

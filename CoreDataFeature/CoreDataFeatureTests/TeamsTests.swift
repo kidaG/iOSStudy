@@ -20,6 +20,7 @@ class TeamsTests: XCTestCase {
         super.tearDown()
     }
     
+    
     func testFetchAllData() {
         let teams = Teams.fetchAllRecords()
         XCTAssertNotNil(teams)
@@ -32,24 +33,26 @@ class TeamsTests: XCTestCase {
     func testInit(){
         print("count: \(Teams.fetchAllRecords().count)")
         let team:Teams? = Teams()
-        team?.name = "test"
+        team?.name = "test1"
         team?.updateToDB()
         print("count: \(Teams.fetchAllRecords().count)")
     }
     
     func testCreateRecord() {
-        let team = Teams.createRecord("TestTeam", id: 0)
-        XCTAssertNotNil(team)
-        XCTAssertEqual("TestTeam", team?.name)
-        XCTAssertEqual(0, team?.teamId)
-        print(team)
+        let team = Teams.createNewRecord()
+        team.name = "CreateRecord" + String(NSDate())
+        team.teamId = 1
+        team.updateToDB()
     }
     
     func testCreateRecord2() {
         let count = Teams.fetchAllRecords().count
-        let teams = Teams.createRecord("TestTeam", id: 0)
-        XCTAssertNotNil(teams)
-        print(teams)
+        let team = Teams.createNewRecord()
+        team.name = "CreateRecord" + String(NSDate())
+        team.teamId = 2
+        team.updateToDB()
+        XCTAssertNotNil(team)
+        print(team)
         
         XCTAssertEqual(count, Teams.fetchAllRecords().count - 1)
     }

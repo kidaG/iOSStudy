@@ -16,9 +16,13 @@ class Records: NSManagedObject {
     // AppDelegateクラスのインスタンスを取得
     static let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate
     
-    /// オリジナルの初期化。これで作成された変数はDBに登録される
-    /// 注意：一時的にmanagedObjectContextに保存されるが、saveContextをしていないため、実際にDBには書き込まれないことに注意する必要あり。
-    init(tableName:String, isSave:Bool){
+    
+    init(){
+        fatalError()
+    }
+    
+    /// - parameter isSave: Trueの場合はappDelegateにデータを保存する。Falseの場合はどこにも保存されない。
+    required init(tableName:String, isSave:Bool = true){
         if let context = Records.appDelegate?.managedObjectContext {
             if let entity = NSEntityDescription.entityForName(tableName, inManagedObjectContext: context){
                 super.init(entity: entity, insertIntoManagedObjectContext: (isSave ? context : nil))
@@ -34,34 +38,22 @@ class Records: NSManagedObject {
         super.init(entity: entity, insertIntoManagedObjectContext: context)
     }
     
-    class func fetchAllRecords(tableName:String) -> [Records]{
-        var records:[Records] = []
-        if let context = Records.appDelegate?.managedObjectContext {
-            let entityDiscription = NSEntityDescription.entityForName(tableName, inManagedObjectContext: context)
-            let fetchRequest = NSFetchRequest()
-            fetchRequest.entity = entityDiscription
-            
-            if let results = try! context.executeFetchRequest(fetchRequest) as? [Records] {
-                records = results
-            }
-        }
-        return records
+    /// サブクラスのレコードを作成するファクトリー関数
+    class func createNewRecord(isSave:Bool = true) -> Self{
+        return self.init(tableName:self._getTableName(), isSave:isSave)
     }
     
+
+    /// すべてのレコードを削除する
     static func deleteAllRecords(){
-        
         if let context = Records.appDelegate?.managedObjectContext {
-            let entityDiscription = NSEntityDescription.entityForName(Constant.TableName, inManagedObjectContext: context)
+            let entityDiscription = NSEntityDescription.entityForName(_getTableName(), inManagedObjectContext: context)
             let fetchRequest = NSFetchRequest()
             fetchRequest.entity = entityDiscription
-            
-            if let results = try! context.executeFetchRequest(fetchRequest) as? [Teams] {
-                let teams = results
-                
-                for team in teams{
-                    context.deleteObject(team)
+            if let results = try! context.executeFetchRequest(fetchRequest) as? [Records] {
+                for result in results{
+                    context.deleteObject(result)
                 }
-                
                 Records.appDelegate?.saveContext()
             }
         }
@@ -72,8 +64,24 @@ class Records: NSManagedObject {
         Records.appDelegate?.saveContext()
     }
     
+    
+    /// protected
+    static func _fetchAllRecords() -> [Records]{
+        var records:[Records] = []
+        if let context = Records.appDelegate?.managedObjectContext {
+            let entityDiscription = NSEntityDescription.entityForName(self._getTableName(), inManagedObjectContext: context)
+            let fetchRequest = NSFetchRequest()
+            fetchRequest.entity = entityDiscription
+            
+            if let results = try! context.executeFetchRequest(fetchRequest) as? [Records] {
+                records = results
+            }
+        }
+        return records
+    }
+    
     /// サブクラスで実装される
-    class func getTableName() -> String{
+    class func _getTableName() -> String{
         fatalError("This method should be overrided")
     }
 

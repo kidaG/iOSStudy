@@ -41,7 +41,7 @@ class AddTeamViewController: UIViewController {
             print("Fail")
             return
         }
-        let team = Teams()
+        let team = Teams(isSave: true)
         team.teamId = id
         team.name = teamName
         team.updateToDB()
