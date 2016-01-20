@@ -19,6 +19,8 @@
 		FA7881581C4E5A3600633DC2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7881571C4E5A3600633DC2 /* TabBarController.swift */; };
 		FA78815A1C4E5A6300633DC2 /* Tab2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7881591C4E5A6300633DC2 /* Tab2ViewController.swift */; };
 		FA78815D1C4E5AF300633DC2 /* Main_BackUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA78815B1C4E5AF300633DC2 /* Main_BackUp.storyboard */; };
+		FA78815F1C4FAC7200633DC2 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA78815E1C4FAC7200633DC2 /* PageViewController.swift */; };
+		FA78819F1C4FB82F00633DC2 /* SinglePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA78819E1C4FB82F00633DC2 /* SinglePageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		FA7881571C4E5A3600633DC2 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		FA7881591C4E5A6300633DC2 /* Tab2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tab2ViewController.swift; sourceTree = "<group>"; };
 		FA78815C1C4E5AF300633DC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_BackUp.storyboard; sourceTree = "<group>"; };
+		FA78815E1C4FAC7200633DC2 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		FA78819E1C4FB82F00633DC2 /* SinglePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SinglePageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,8 @@
 				FA7881571C4E5A3600633DC2 /* TabBarController.swift */,
 				FA7881261C4E569000633DC2 /* Tab1ViewController.swift */,
 				FA7881591C4E5A6300633DC2 /* Tab2ViewController.swift */,
+				FA78815E1C4FAC7200633DC2 /* PageViewController.swift */,
+				FA78819E1C4FB82F00633DC2 /* SinglePageViewController.swift */,
 				FA7881281C4E569000633DC2 /* Main.storyboard */,
 				FA78815B1C4E5AF300633DC2 /* Main_BackUp.storyboard */,
 				FA78812E1C4E569000633DC2 /* Assets.xcassets */,
@@ -273,11 +279,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA7881271C4E569000633DC2 /* Tab1ViewController.swift in Sources */,
+				FA78815F1C4FAC7200633DC2 /* PageViewController.swift in Sources */,
 				FA7881561C4E596400633DC2 /* StartControllerView.swift in Sources */,
 				FA7881251C4E569000633DC2 /* AppDelegate.swift in Sources */,
 				FA7881581C4E5A3600633DC2 /* TabBarController.swift in Sources */,
 				FA78812D1C4E569000633DC2 /* MemoryMangement.xcdatamodeld in Sources */,
 				FA78815A1C4E5A6300633DC2 /* Tab2ViewController.swift in Sources */,
+				FA78819F1C4FB82F00633DC2 /* SinglePageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +520,7 @@
 				FA78814E1C4E569100633DC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA78814F1C4E569100633DC2 /* Build configuration list for PBXNativeTarget "MemoryMangementTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +529,7 @@
 				FA7881511C4E569100633DC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA7881521C4E569100633DC2 /* Build configuration list for PBXNativeTarget "MemoryMangementUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +538,7 @@
 				FA7881541C4E569100633DC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
