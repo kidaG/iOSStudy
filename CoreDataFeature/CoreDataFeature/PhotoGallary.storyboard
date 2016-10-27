@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VLf-Np-5ac">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photo Album-->
+        <scene sceneID="sW1-Sc-48A">
+            <objects>
+                <collectionViewController id="VLf-Np-5ac" customClass="PhotoGallaryCollectionViewController" customModule="CoreDataFeature" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Wzu-JC-TMp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7ib-zF-abq">
+                            <size key="itemSize" width="100" height="100"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCellId" id="Gpo-9z-uqA" customClass="PhotoThumnailCell" customModule="CoreDataFeature" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nMP-8n-oR4">
+                                            <rect key="frame" x="8" y="8" width="84" height="84"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="nMP-8n-oR4" secondAttribute="trailing" id="0Qa-Gn-xUl"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="nMP-8n-oR4" secondAttribute="bottom" id="SM9-eD-Vih"/>
+                                    <constraint firstItem="nMP-8n-oR4" firstAttribute="leading" secondItem="Gpo-9z-uqA" secondAttribute="leadingMargin" id="cBZ-nf-xY4"/>
+                                    <constraint firstItem="nMP-8n-oR4" firstAttribute="top" secondItem="Gpo-9z-uqA" secondAttribute="topMargin" id="pTX-Lt-JBh"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imgView" destination="nMP-8n-oR4" id="vyJ-PJ-tCK"/>
+                                    <segue destination="vG1-pl-Jh4" kind="show" identifier="GallaryToPhoto" id="DP3-X0-OpP"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="VLf-Np-5ac" id="lRj-O4-fQP"/>
+                            <outlet property="delegate" destination="VLf-Np-5ac" id="6D0-PF-F0c"/>
+                        </connections>
+                    </collectionView>
+                    <toolbarItems>
+                        <barButtonItem systemItem="organize" id="hPl-vQ-o3b" customClass="P"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Photo Album" id="ep6-41-PAB">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="G0C-0s-NB3"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="collectionView" destination="Wzu-JC-TMp" id="LcY-n4-Jum"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d5c-bd-Gkd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="764" y="157"/>
+        </scene>
+        <!--Photo Detail-->
+        <scene sceneID="gVo-Ys-jBi">
+            <objects>
+                <viewController id="vG1-pl-Jh4" customClass="PhotoViewController" customModule="CoreDataFeature" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cez-Lr-edV"/>
+                        <viewControllerLayoutGuide type="bottom" id="m9T-4G-NtR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Dd-v4-p7K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SwM-fu-ohg">
+                                <rect key="frame" x="26" y="74" width="323" height="539"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SwM-fu-ohg" firstAttribute="leading" secondItem="4Dd-v4-p7K" secondAttribute="leadingMargin" constant="10" id="ZI8-6u-3dU"/>
+                            <constraint firstItem="m9T-4G-NtR" firstAttribute="top" secondItem="SwM-fu-ohg" secondAttribute="bottom" constant="10" id="agC-Ra-xeP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SwM-fu-ohg" secondAttribute="trailing" constant="10" id="bg7-9m-MAn"/>
+                            <constraint firstItem="SwM-fu-ohg" firstAttribute="top" secondItem="Cez-Lr-edV" secondAttribute="bottom" constant="10" id="pNd-6p-nZ8"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem systemItem="action" id="LLt-Wa-ZQV"/>
+                        <barButtonItem width="298" style="plain" systemItem="fixedSpace" id="N5f-ax-nUG"/>
+                        <barButtonItem systemItem="trash" id="m2f-bU-Qfb"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Photo Detail" id="yIl-U0-eUj">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="hIp-wV-hRL">
+                            <connections>
+                                <action selector="btnCancel:" destination="vG1-pl-Jh4" id="709-Ha-HJs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="imgView" destination="SwM-fu-ohg" id="CXQ-jn-gSk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MlP-8G-btN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1224.5" y="156.5"/>
+        </scene>
+    </scenes>
+</document>

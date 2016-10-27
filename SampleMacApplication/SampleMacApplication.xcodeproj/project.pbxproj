@@ -1,0 +1,515 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA7881AD1C62481100633DC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7881AC1C62481100633DC2 /* AppDelegate.swift */; };
+		FA7881AF1C62481100633DC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7881AE1C62481100633DC2 /* ViewController.swift */; };
+		FA7881B21C62481100633DC2 /* SampleMacApplication.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA7881B01C62481100633DC2 /* SampleMacApplication.xcdatamodeld */; };
+		FA7881B41C62481100633DC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA7881B31C62481100633DC2 /* Assets.xcassets */; };
+		FA7881B71C62481100633DC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA7881B51C62481100633DC2 /* Main.storyboard */; };
+		FA7881C21C62481200633DC2 /* SampleMacApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7881C11C62481200633DC2 /* SampleMacApplicationTests.swift */; };
+		FA7881CD1C62481200633DC2 /* SampleMacApplicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7881CC1C62481200633DC2 /* SampleMacApplicationUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FA7881BE1C62481100633DC2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA7881A11C62481100633DC2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA7881A81C62481100633DC2;
+			remoteInfo = SampleMacApplication;
+		};
+		FA7881C91C62481200633DC2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA7881A11C62481100633DC2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA7881A81C62481100633DC2;
+			remoteInfo = SampleMacApplication;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FA7881A91C62481100633DC2 /* SampleMacApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleMacApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA7881AC1C62481100633DC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FA7881AE1C62481100633DC2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FA7881B11C62481100633DC2 /* SampleMacApplication.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SampleMacApplication.xcdatamodel; sourceTree = "<group>"; };
+		FA7881B31C62481100633DC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA7881B61C62481100633DC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FA7881B81C62481100633DC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA7881BD1C62481100633DC2 /* SampleMacApplicationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleMacApplicationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA7881C11C62481200633DC2 /* SampleMacApplicationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleMacApplicationTests.swift; sourceTree = "<group>"; };
+		FA7881C31C62481200633DC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA7881C81C62481200633DC2 /* SampleMacApplicationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleMacApplicationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA7881CC1C62481200633DC2 /* SampleMacApplicationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleMacApplicationUITests.swift; sourceTree = "<group>"; };
+		FA7881CE1C62481200633DC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA7881A61C62481100633DC2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA7881BA1C62481100633DC2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA7881C51C62481200633DC2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA7881A01C62481100633DC2 = {
+			isa = PBXGroup;
+			children = (
+				FA7881AB1C62481100633DC2 /* SampleMacApplication */,
+				FA7881C01C62481200633DC2 /* SampleMacApplicationTests */,
+				FA7881CB1C62481200633DC2 /* SampleMacApplicationUITests */,
+				FA7881AA1C62481100633DC2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA7881AA1C62481100633DC2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA7881A91C62481100633DC2 /* SampleMacApplication.app */,
+				FA7881BD1C62481100633DC2 /* SampleMacApplicationTests.xctest */,
+				FA7881C81C62481200633DC2 /* SampleMacApplicationUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA7881AB1C62481100633DC2 /* SampleMacApplication */ = {
+			isa = PBXGroup;
+			children = (
+				FA7881AC1C62481100633DC2 /* AppDelegate.swift */,
+				FA7881AE1C62481100633DC2 /* ViewController.swift */,
+				FA7881B31C62481100633DC2 /* Assets.xcassets */,
+				FA7881B51C62481100633DC2 /* Main.storyboard */,
+				FA7881B81C62481100633DC2 /* Info.plist */,
+				FA7881B01C62481100633DC2 /* SampleMacApplication.xcdatamodeld */,
+			);
+			path = SampleMacApplication;
+			sourceTree = "<group>";
+		};
+		FA7881C01C62481200633DC2 /* SampleMacApplicationTests */ = {
+			isa = PBXGroup;
+			children = (
+				FA7881C11C62481200633DC2 /* SampleMacApplicationTests.swift */,
+				FA7881C31C62481200633DC2 /* Info.plist */,
+			);
+			path = SampleMacApplicationTests;
+			sourceTree = "<group>";
+		};
+		FA7881CB1C62481200633DC2 /* SampleMacApplicationUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FA7881CC1C62481200633DC2 /* SampleMacApplicationUITests.swift */,
+				FA7881CE1C62481200633DC2 /* Info.plist */,
+			);
+			path = SampleMacApplicationUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA7881A81C62481100633DC2 /* SampleMacApplication */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA7881D11C62481200633DC2 /* Build configuration list for PBXNativeTarget "SampleMacApplication" */;
+			buildPhases = (
+				FA7881A51C62481100633DC2 /* Sources */,
+				FA7881A61C62481100633DC2 /* Frameworks */,
+				FA7881A71C62481100633DC2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SampleMacApplication;
+			productName = SampleMacApplication;
+			productReference = FA7881A91C62481100633DC2 /* SampleMacApplication.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FA7881BC1C62481100633DC2 /* SampleMacApplicationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA7881D41C62481200633DC2 /* Build configuration list for PBXNativeTarget "SampleMacApplicationTests" */;
+			buildPhases = (
+				FA7881B91C62481100633DC2 /* Sources */,
+				FA7881BA1C62481100633DC2 /* Frameworks */,
+				FA7881BB1C62481100633DC2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA7881BF1C62481100633DC2 /* PBXTargetDependency */,
+			);
+			name = SampleMacApplicationTests;
+			productName = SampleMacApplicationTests;
+			productReference = FA7881BD1C62481100633DC2 /* SampleMacApplicationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FA7881C71C62481200633DC2 /* SampleMacApplicationUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA7881D71C62481200633DC2 /* Build configuration list for PBXNativeTarget "SampleMacApplicationUITests" */;
+			buildPhases = (
+				FA7881C41C62481200633DC2 /* Sources */,
+				FA7881C51C62481200633DC2 /* Frameworks */,
+				FA7881C61C62481200633DC2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA7881CA1C62481200633DC2 /* PBXTargetDependency */,
+			);
+			name = SampleMacApplicationUITests;
+			productName = SampleMacApplicationUITests;
+			productReference = FA7881C81C62481200633DC2 /* SampleMacApplicationUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA7881A11C62481100633DC2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = yuya;
+				TargetAttributes = {
+					FA7881A81C62481100633DC2 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					FA7881BC1C62481100633DC2 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = FA7881A81C62481100633DC2;
+					};
+					FA7881C71C62481200633DC2 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = FA7881A81C62481100633DC2;
+					};
+				};
+			};
+			buildConfigurationList = FA7881A41C62481100633DC2 /* Build configuration list for PBXProject "SampleMacApplication" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA7881A01C62481100633DC2;
+			productRefGroup = FA7881AA1C62481100633DC2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA7881A81C62481100633DC2 /* SampleMacApplication */,
+				FA7881BC1C62481100633DC2 /* SampleMacApplicationTests */,
+				FA7881C71C62481200633DC2 /* SampleMacApplicationUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA7881A71C62481100633DC2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA7881B41C62481100633DC2 /* Assets.xcassets in Resources */,
+				FA7881B71C62481100633DC2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA7881BB1C62481100633DC2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA7881C61C62481200633DC2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA7881A51C62481100633DC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA7881AF1C62481100633DC2 /* ViewController.swift in Sources */,
+				FA7881B21C62481100633DC2 /* SampleMacApplication.xcdatamodeld in Sources */,
+				FA7881AD1C62481100633DC2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA7881B91C62481100633DC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA7881C21C62481200633DC2 /* SampleMacApplicationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA7881C41C62481200633DC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA7881CD1C62481200633DC2 /* SampleMacApplicationUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FA7881BF1C62481100633DC2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA7881A81C62481100633DC2 /* SampleMacApplication */;
+			targetProxy = FA7881BE1C62481100633DC2 /* PBXContainerItemProxy */;
+		};
+		FA7881CA1C62481200633DC2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA7881A81C62481100633DC2 /* SampleMacApplication */;
+			targetProxy = FA7881C91C62481200633DC2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FA7881B51C62481100633DC2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA7881B61C62481100633DC2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA7881CF1C62481200633DC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FA7881D01C62481200633DC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		FA7881D21C62481200633DC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SampleMacApplication/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.ky.sample.SampleMacApplication;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FA7881D31C62481200633DC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SampleMacApplication/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.ky.sample.SampleMacApplication;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FA7881D51C62481200633DC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SampleMacApplicationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.ky.sample.SampleMacApplicationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SampleMacApplication.app/Contents/MacOS/SampleMacApplication";
+			};
+			name = Debug;
+		};
+		FA7881D61C62481200633DC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SampleMacApplicationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.ky.sample.SampleMacApplicationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SampleMacApplication.app/Contents/MacOS/SampleMacApplication";
+			};
+			name = Release;
+		};
+		FA7881D81C62481200633DC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SampleMacApplicationUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.ky.sample.SampleMacApplicationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SampleMacApplication;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		FA7881D91C62481200633DC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SampleMacApplicationUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.ky.sample.SampleMacApplicationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SampleMacApplication;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA7881A41C62481100633DC2 /* Build configuration list for PBXProject "SampleMacApplication" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA7881CF1C62481200633DC2 /* Debug */,
+				FA7881D01C62481200633DC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA7881D11C62481200633DC2 /* Build configuration list for PBXNativeTarget "SampleMacApplication" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA7881D21C62481200633DC2 /* Debug */,
+				FA7881D31C62481200633DC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FA7881D41C62481200633DC2 /* Build configuration list for PBXNativeTarget "SampleMacApplicationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA7881D51C62481200633DC2 /* Debug */,
+				FA7881D61C62481200633DC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FA7881D71C62481200633DC2 /* Build configuration list for PBXNativeTarget "SampleMacApplicationUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA7881D81C62481200633DC2 /* Debug */,
+				FA7881D91C62481200633DC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FA7881B01C62481100633DC2 /* SampleMacApplication.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FA7881B11C62481100633DC2 /* SampleMacApplication.xcdatamodel */,
+			);
+			currentVersion = FA7881B11C62481100633DC2 /* SampleMacApplication.xcdatamodel */;
+			path = SampleMacApplication.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FA7881A11C62481100633DC2 /* Project object */;
+}

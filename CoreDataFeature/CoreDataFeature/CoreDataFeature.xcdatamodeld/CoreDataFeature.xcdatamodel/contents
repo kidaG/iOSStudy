@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="14F27" minimumToolsVersion="Automatic">
+    <entity name="Records" representedClassName=".Records" syncable="YES"/>
+    <entity name="Teams" representedClassName=".Teams" parentEntity="Records" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teamId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Users" inverseName="team" inverseEntity="Users" syncable="YES"/>
+    </entity>
+    <entity name="Users" representedClassName=".Users" parentEntity="Records" syncable="YES">
+        <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="birthday" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="team" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Teams" inverseName="user" inverseEntity="Teams" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Teams" positionX="-54" positionY="18" width="128" height="90"/>
+        <element name="Users" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="Records" positionX="-54" positionY="27" width="128" height="45"/>
+    </elements>
+</model>

@@ -273,5 +273,13 @@ iOSではデータは基本的にフラッシュドライブに保存します�
 
  
 
+#11. UIPageViewControllerでの問題
+UIPageViewControllerをUITabbarControllerに埋め込むと、UIPageControlがtabのしたに埋め込まれてしまう現象が発生する。
+私の環境では、以下の２つが原因だった。
+
+1. UIPageControlの色が白だった
+2. ストーリーボード上のUIPageViewControllerの設定で下記のチェックボックスがONになっている。
+
+		Attributes Inspector > ViewController > Under Buttom bars
 
 
