@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA8FDAC41DC2396000283D9D /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8FDAC31DC2396000283D9D /* CustomCollectionViewCell.xib */; };
+		FA8FDAC61DC23FA300283D9D /* CustomCollectionViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8FDAC51DC23FA300283D9D /* CustomCollectionViewCell2.xib */; };
+		FA8FDAC81DC2406A00283D9D /* CustomCollectionViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FDAC71DC2406A00283D9D /* CustomCollectionViewCell2.swift */; };
 		FA9703AD1DBF75E700186AA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9703AC1DBF75E700186AA2 /* AppDelegate.swift */; };
 		FA9703AF1DBF75E700186AA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9703AE1DBF75E700186AA2 /* ViewController.swift */; };
 		FA9703B21DBF75E700186AA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA9703B01DBF75E700186AA2 /* Main.storyboard */; };
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA8FDAC31DC2396000283D9D /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
+		FA8FDAC51DC23FA300283D9D /* CustomCollectionViewCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCollectionViewCell2.xib; sourceTree = "<group>"; };
+		FA8FDAC71DC2406A00283D9D /* CustomCollectionViewCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomCollectionViewCell2.swift; path = ../CustomCollectionViewCell2.swift; sourceTree = "<group>"; };
 		FA9703A91DBF75E700186AA2 /* UICollectionViewForMultiXib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICollectionViewForMultiXib.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA9703AC1DBF75E700186AA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA9703AE1DBF75E700186AA2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,11 +110,14 @@
 				FA9703AC1DBF75E700186AA2 /* AppDelegate.swift */,
 				FA9703AE1DBF75E700186AA2 /* ViewController.swift */,
 				FA9703DD1DBF7DCB00186AA2 /* CustomCollectionViewCell.swift */,
+				FA8FDAC71DC2406A00283D9D /* CustomCollectionViewCell2.swift */,
 				FA9703B01DBF75E700186AA2 /* Main.storyboard */,
 				FA9703B61DBF75E700186AA2 /* Assets.xcassets */,
 				FA9703B81DBF75E700186AA2 /* LaunchScreen.storyboard */,
 				FA9703BB1DBF75E700186AA2 /* Info.plist */,
 				FA9703B31DBF75E700186AA2 /* UICollectionViewForMultiXib.xcdatamodeld */,
+				FA8FDAC31DC2396000283D9D /* CustomCollectionViewCell.xib */,
+				FA8FDAC51DC23FA300283D9D /* CustomCollectionViewCell2.xib */,
 			);
 			path = UICollectionViewForMultiXib;
 			sourceTree = "<group>";
@@ -238,6 +247,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA8FDAC41DC2396000283D9D /* CustomCollectionViewCell.xib in Resources */,
+				FA8FDAC61DC23FA300283D9D /* CustomCollectionViewCell2.xib in Resources */,
 				FA9703BA1DBF75E700186AA2 /* LaunchScreen.storyboard in Resources */,
 				FA9703B71DBF75E700186AA2 /* Assets.xcassets in Resources */,
 				FA9703B21DBF75E700186AA2 /* Main.storyboard in Resources */,
@@ -268,6 +279,7 @@
 				FA9703AF1DBF75E700186AA2 /* ViewController.swift in Sources */,
 				FA9703AD1DBF75E700186AA2 /* AppDelegate.swift in Sources */,
 				FA9703B51DBF75E700186AA2 /* UICollectionViewForMultiXib.xcdatamodeld in Sources */,
+				FA8FDAC81DC2406A00283D9D /* CustomCollectionViewCell2.swift in Sources */,
 				FA9703DE1DBF7DCB00186AA2 /* CustomCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -511,6 +523,7 @@
 				FA9703D61DBF75E800186AA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA9703D71DBF75E800186AA2 /* Build configuration list for PBXNativeTarget "UICollectionViewForMultiXibTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +532,7 @@
 				FA9703D91DBF75E800186AA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA9703DA1DBF75E800186AA2 /* Build configuration list for PBXNativeTarget "UICollectionViewForMultiXibUITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +541,7 @@
 				FA9703DC1DBF75E800186AA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

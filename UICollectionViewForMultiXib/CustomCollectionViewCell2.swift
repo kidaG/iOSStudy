@@ -8,12 +8,11 @@
 
 import UIKit
 
-class CustomCollectionViewCell: UICollectionViewCell {
+class CustomCollectionViewCell2: UICollectionViewCell {
     
-    @IBOutlet weak var label: UILabel!
-
-    func setLabelString(text:String){
-        label.text = text
-    }
+    
+    //func setLabelString(text:String){
+    //    label.text = text
+    //}
     
 }

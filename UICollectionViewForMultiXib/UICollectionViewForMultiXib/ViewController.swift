@@ -8,40 +8,39 @@
 
 import UIKit
 
-extension Array {
-    subscript (safe index: Int) -> Element? {
-        get {
-            print("なぜよばれないし１1")
-            return self.indices ~= index ? self[index] : nil
-        }
-        set (value) {
-            print("なぜよばれないし２1")
-            if value == nil {
-                return
-            }
-            if !(self.indices ~= index) {
-                NSLog("WARN: index:\(index) is out of range, so ignored. (array:\(self))")
-                return
-            }
-            
-            self[index] = value!
-        }
-    }
-}
-
-let test = [1,2,3,4]
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
     
     @IBOutlet weak var collectionView: UICollectionView!
 
     
-    let num:Array<String> = ["10", "20", "30", "40"]
+    let num = ["10", "20", "30", "40", "50", "-1",
+               "10", "20", "30", "40", "50", "-1",
+               "10", "20", "30", "40", "50", "-1",
+               "10", "20", "30", "40", "50", "-1",
+               "10", "20", "30", "40", "50", "-1",
+               "10", "20", "30", "40", "50", "-1",
+               "10", "20", "30", "40", "50", "-1",
+               "10", "20", "30", "40", "50", "-1",
+               "10", "20", "30", "40", "50", "-1",
+               "10", "20", "30", "40", "50", "-1"]
     override func viewDidLoad() {
         super.viewDidLoad()
         print("ViewController")
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        setCustomCellXib()
+    }
+    
+    // UICollectionViewのセルIDとXibファイルを関連付ける。このため、Storyboard上では、どのセルがどのカスタムセルであるかといった情報を設定する必要はない。xibのviewにカスタムセルを関連付ける。
+    private func setCustomCellXib(){
+        
+        let nib: UINib = UINib(nibName: "CustomCollectionViewCell", bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: "Cell")
+        
+        let nib2: UINib = UINib(nibName: "CustomCollectionViewCell2", bundle: nil)
+        collectionView.register(nib2, forCellWithReuseIdentifier: "Cell2")
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,27 +49,40 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
-        return num.count + 1
+        return num.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
         
+        let row = indexPath.row
         
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? CustomCollectionViewCell{
+        let identifier:String = {
+            if (row%2 == 0){
+                return "Cell"
+            }else{
+                return "Cell2"
+            }
+        }()
         
-            print("CustomCollectionViewCell:" + indexPath.description)
-            print("indexPath.row:" + indexPath.row.description)
-            
-            let n = self.num[indexPath.row]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath)
+        if let cell = cell as? CustomCollectionViewCell{
+        
+            let n = self.num[row]
             print(n)
             print("n.description:" + n.description)
             cell.setLabelString(text: n.description)
             return cell
-        }else{
+        }else if let cell = cell as? CustomCollectionViewCell2{
             print("Cell is not defined")
             
-            let cell = UICollectionViewCell()
+            let n = self.num[row]
+            print(n)
+            print("n.description:" + n.description)
+            //cell.setLabelString(text: n.description)
+            
             return cell
+        }else{
+            fatalError()
         }
         
         
