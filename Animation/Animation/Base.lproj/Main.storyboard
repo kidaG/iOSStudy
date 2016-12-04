@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="0xB-nd-9rp">
-                                <rect key="frame" x="0.0" y="20" width="375" height="220.5"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="320.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アニメーションの基礎知識獲得" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLF-FU-LHG">
                                         <rect key="frame" x="0.0" y="0.0" width="243" height="20.5"/>
@@ -34,7 +34,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i1x-vQ-YGC" userLabel="View Controlled ByTimer">
                                         <rect key="frame" x="0.0" y="20.5" width="100" height="100"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animation By Timer 右へ繰り返す" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="lnT-jf-vRs">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Timer 右へ繰り返す" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="lnT-jf-vRs">
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -54,7 +54,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UFm-gK-4k0" userLabel="View Controlled ByUIView">
                                         <rect key="frame" x="0.0" y="120.5" width="100" height="100"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animation By UIView  右行って左" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="Cf3-Fy-ql6">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By UIKit  右行って左" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="Cf3-Fy-ql6">
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -71,7 +71,30 @@
                                             <constraint firstItem="Cf3-Fy-ql6" firstAttribute="leading" secondItem="UFm-gK-4k0" secondAttribute="leading" id="pKS-qX-et7"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ISF-eQ-5Yb" userLabel="View Controlled ByUIView">
+                                        <rect key="frame" x="0.0" y="220.5" width="100" height="100"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By CABasicAnimation" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="9lW-JV-OTZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ISF-eQ-5Yb" secondAttribute="height" multiplier="1:1" id="HM1-rn-3OU"/>
+                                            <constraint firstAttribute="bottom" secondItem="9lW-JV-OTZ" secondAttribute="bottom" id="LzI-ht-Xlp"/>
+                                            <constraint firstAttribute="height" constant="100" id="YFE-Zn-Dty"/>
+                                            <constraint firstItem="9lW-JV-OTZ" firstAttribute="top" secondItem="ISF-eQ-5Yb" secondAttribute="top" id="ar2-la-rkJ"/>
+                                            <constraint firstItem="9lW-JV-OTZ" firstAttribute="leading" secondItem="ISF-eQ-5Yb" secondAttribute="leading" id="bsE-es-cuM"/>
+                                            <constraint firstAttribute="trailing" secondItem="9lW-JV-OTZ" secondAttribute="trailing" id="pFL-ZO-df2"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="ISF-eQ-5Yb" firstAttribute="width" secondItem="ISF-eQ-5Yb" secondAttribute="height" multiplier="1:1" id="wNe-7o-YdN"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -82,6 +105,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="viewControlledByCoreAnimation" destination="ISF-eQ-5Yb" id="f6r-9h-HX1"/>
                         <outlet property="viewControlledByTimer" destination="i1x-vQ-YGC" id="MQH-eg-Je2"/>
                         <outlet property="viewControlledByUIView" destination="UFm-gK-4k0" id="hET-VV-nqY"/>
                     </connections>
