@@ -11,24 +11,37 @@ import UIKit
 class ViewController: UIViewController, CAAnimationDelegate{
 
     @IBOutlet weak var viewControlledByTimer: UIView!
+    @IBOutlet weak var remainingTimeForTimer: UILabel!
+    
     @IBOutlet weak var viewControlledByUIView: UIView!
     @IBOutlet weak var viewControlledByCoreAnimation: UIView!
-    var timer:Timer!
     override func viewDidLoad() {
         super.viewDidLoad()
         print("viewDidLoad")
         
-        if timer == nil{
-            timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true, block: { (timer:Timer) in
-//                print("Timer:\(timer)")
-                ViewController.move(self.viewControlledByTimer, with: 1, parentWidth: self.view.bounds.size.width)
-            })
-            timer.fire()
-        }
+        var finishTimer:Timer? = nil
+        let timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true, block: { (timer:Timer) in
+            print("first timer: \(timer.fireDate)")
+            if let finishDate = finishTimer?.fireDate{
+                let remainingTime = ceil(finishDate.timeIntervalSince(Date()))
+                self.remainingTimeForTimer.text = "\(remainingTime)"
+            }
+            
+            ViewController.move(self.viewControlledByTimer, with: 1, parentWidth: self.view.bounds.size.width)
+        })
+//        timer.fire()
+        // 10sec後に止める
+        finishTimer = Timer.scheduledTimer(withTimeInterval: 10.0, repeats: false, block: {(timer3:Timer) in
+            print("second timer: stop first timer")
+            timer.invalidate()
+        })
+        
         
         self.viewControlledByTimer.backgroundColor = UIColor.red
         self.viewControlledByUIView.backgroundColor = UIColor.green
         self.viewControlledByCoreAnimation.backgroundColor = UIColor.blue
+        
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
